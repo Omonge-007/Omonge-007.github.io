@@ -1,13 +1,14 @@
 :root {
-  --navy-deep: #0a1628;
-  --navy: #0f2238;
-  --navy-light: #16304d;
-  --gold: #c9a24b;
-  --gold-soft: #e3c983;
-  --text-main: #eef2f6;
-  --text-muted: #a8b4c2;
-  --glass-bg: rgba(22, 48, 77, 0.55);
-  --glass-border: rgba(201, 162, 75, 0.25);
+  /* Blackcrest VA brand kit colors */
+  --navy-deep: #1a1a2e;
+  --navy: #20203a;
+  --navy-light: #292948;
+  --gold: #e8a838;
+  --gold-soft: #f0c06e;
+  --text-main: #faf9f7;
+  --text-muted: #c6c6d6;
+  --glass-bg: rgba(41, 41, 72, 0.55);
+  --glass-border: rgba(232, 168, 56, 0.25);
   --sidebar-w: 88px;
 }
 
@@ -17,18 +18,26 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text-main);
   background:
-    radial-gradient(ellipse at top left, rgba(201,162,75,0.06), transparent 50%),
-    linear-gradient(160deg, var(--navy-deep) 0%, #081320 100%);
+    radial-gradient(ellipse at top left, rgba(232,168,56,0.07), transparent 50%),
+    linear-gradient(160deg, var(--navy-deep) 0%, #121224 100%);
   min-height: 100vh;
 }
 
 h1, h2, h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   margin: 0 0 0.4em;
   color: #fff;
+}
+
+h4 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: var(--gold-soft);
 }
 
 a { color: var(--gold-soft); text-decoration: none; }
@@ -254,8 +263,25 @@ main {
 }
 
 /* About */
-.about-copy { color: var(--text-muted); line-height: 1.7; margin-bottom: 32px; }
-.subhead { font-size: 18px; color: var(--gold-soft); margin-bottom: 16px; }
+.about-copy { color: var(--text-muted); line-height: 1.7; }
+.about-copy p { margin: 0 0 16px; }
+.about-copy p:last-child { margin-bottom: 0; }
+.subhead { font-family: 'Lato', sans-serif; font-size: 18px; font-weight: 700; color: var(--gold-soft); margin-bottom: 16px; }
+
+.skills-columns { display: flex; gap: 48px; flex-wrap: wrap; margin-bottom: 8px; }
+.skills-col { flex: 1; min-width: 220px; }
+.skills-list { list-style: none; margin: 0; padding: 0; color: var(--text-muted); line-height: 2; font-size: 14px; }
+.skills-list li { padding-left: 18px; position: relative; }
+.skills-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
 
 .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
 .skill-tag {
@@ -267,21 +293,45 @@ main {
   color: var(--text-main);
 }
 
+/* DISC */
+.disc-grid { display: flex; flex-direction: column; gap: 22px; }
+.disc-item { display: flex; gap: 16px; align-items: flex-start; }
+.disc-dot { width: 14px; height: 14px; border-radius: 50%; flex: 0 0 14px; margin-top: 6px; }
+.disc-d { background: var(--navy-deep); border: 2px solid var(--gold-soft); }
+.disc-i { background: var(--gold); }
+.disc-s { background: #b98a2e; }
+.disc-c { background: #faf9f7; }
+.disc-item h4 { font-size: 15px; margin-bottom: 4px; }
+.disc-item p { color: var(--text-muted); margin: 0; line-height: 1.6; font-size: 14px; }
+
 /* Work */
 .work-grid { display: flex; flex-direction: column; gap: 28px; }
 
 .work-card { display: flex; gap: 28px; align-items: stretch; }
 
 .work-media {
-  flex: 0 0 220px;
-  background: linear-gradient(135deg, var(--navy-light), var(--navy));
+  flex: 0 0 240px;
   border-radius: 12px;
+  overflow: hidden;
+  min-height: 160px;
+  border: 1px solid var(--glass-border);
+}
+
+.work-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.work-media-placeholder {
+  background: linear-gradient(135deg, var(--navy-light), var(--navy));
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-muted);
   font-size: 13px;
-  min-height: 160px;
 }
 
 .work-body { flex: 1; }
