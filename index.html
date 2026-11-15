@@ -14,297 +14,330 @@
 
 <!-- Sidebar nav -->
 <nav class="sidebar" aria-label="Primary" id="primaryNav">
-  <div class="brand" aria-hidden="true"><img src="headshot.jpg" alt=""></div>
+  <div class="brand" aria-hidden="true"></div>
   <ul class="nav-icons">
-    <li><a href="#home" class="nav-link active" data-label="Home">
+    <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
+    <li><button type="button" class="nav-link active" data-target="home" data-label="Home" aria-label="Home">
       <svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
-    </a></li>
-    <li><a href="#about" class="nav-link" data-label="About">
+    </button></li>
+    <li><button type="button" class="nav-link" data-target="about" data-label="About" aria-label="About">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
-    </a></li>
-    <li><a href="#skills" class="nav-link" data-label="Skills">
+    </button></li>
+    <li><button type="button" class="nav-link" data-target="skills" data-label="Skills" aria-label="Skills">
       <svg viewBox="0 0 24 24"><path d="m12 2 2.9 6.3L22 9.3l-5 4.9 1.2 7-6.2-3.3L5.8 21.2 7 14.2l-5-4.9 7.1-1z"/></svg>
-    </a></li>
-    <li><a href="#disc" class="nav-link" data-label="DISC">
+    </button></li>
+    <li><button type="button" class="nav-link" data-target="disc" data-label="DISC" aria-label="DISC">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 3"/></svg>
-    </a></li>
-    <li><a href="#work" class="nav-link" data-label="My Work">
+    </button></li>
+    <li><button type="button" class="nav-link" data-target="work" data-label="My Work" aria-label="My Work">
       <svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
-    </a></li>
-    <li><a href="#contact" class="nav-link" data-label="Contact">
+    </button></li>
+    <li><button type="button" class="nav-link" data-target="contact" data-label="Contact" aria-label="Contact">
       <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-    </a></li>
+    </button></li>
   </ul>
 </nav>
 
 <!-- Mobile top bar -->
 <header class="mobile-bar">
-  <span class="brand" aria-hidden="true"><img src="headshot.jpg" alt=""></span>
+  <span class="brand" aria-hidden="true"></span>
   <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="primaryNav">
     <span></span><span></span><span></span>
   </button>
 </header>
 
-<main>
+<div class="deck">
+  <div class="strip" id="strip">
 
-  <!-- HOME -->
-  <section id="home" class="section hero">
-    <div class="glass-card hero-card">
-      <div class="hero-photo">
-        <img src="headshot.jpg" alt="Wycliffe Omonge">
-      </div>
-      <p class="eyebrow">Marketing Operations Specialist | GoHighLevel (GHL)</p>
-      <h1>Wycliffe Omonge</h1>
-      <p class="hero-intro">
-        I'm a Marketing Operations Specialist who builds the systems businesses run on:
-        websites, funnels, automation, and content infrastructure, mostly inside GoHighLevel, and
-        mostly from scratch.
-      </p>
-      <div class="hero-actions">
-        <a href="#work" class="btn btn-primary">View My Work</a>
-        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="glass-card">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-copy">
-        <p>
-          I'm a Marketing Operations Specialist who builds the systems businesses run on:
-          websites, funnels, automation, and content infrastructure, mostly inside GoHighLevel, and
-          mostly from scratch.
-        </p>
-        <p>
-          Right now I own marketing operations for a financial education firm operating under strict
-          compliance guidelines. I built their website from the ground up and still maintain it. I've
-          stood up full CRM and blog infrastructure where none existed, built lead-generation funnels
-          that had to pass compliance review before going live, and written the SOPs the rest of the
-          team now runs on.
-        </p>
-        <p>
-          Before that, I spent close to four years running email marketing campaigns for an audience
-          of 50,000+ subscribers, managing 2-3 campaigns a week and pushing click-through rates from
-          18% to 28% through consistent testing and optimization.
-        </p>
-        <p>
-          What sets me apart from most people working in GoHighLevel: I'm not limited to the
-          drag-and-drop builder. I write HTML and CSS by hand and deploy it directly into GHL through
-          Custom Code, which means I can build things most GHL users simply can't. If a client needs
-          something outside the template library, I don't tell them it's not possible, I build it.
-        </p>
-        <p>
-          I also work daily with AI tools, Claude, ChatGPT, and Perplexity, as part of how I actually
-          get work done: drafting and refining content, researching and fact-checking faster, building
-          documentation, and automating pieces of my own workflow. This isn't a buzzword on a resume,
-          it's how I operate day to day, and it's part of why I can move quickly without sacrificing
-          accuracy.
-        </p>
-        <p>
-          I care about systems that outlast me. Every build I ship comes with documentation, so the
-          people who come after me can run it without needing me in the room.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="section">
-    <div class="glass-card">
-      <h2 class="section-title">My Skills</h2>
-      <div class="skills-columns">
-        <div class="skills-col">
-          <h3 class="subhead">Platforms &amp; Tools</h3>
-          <ul class="skills-list">
-            <li>GoHighLevel (GHL): funnels, websites, automation workflows, blog/CMS builds, Custom Code</li>
-            <li>HTML &amp; CSS: hand-coded pages and components, not template-dependent</li>
-            <li>Mailchimp, email marketing automation</li>
-            <li>Canva, Notion, Slack, Asana</li>
-          </ul>
-          <h3 class="subhead" style="margin-top: 20px;">AI &amp; Workflow Tools</h3>
-          <ul class="skills-list">
-            <li>Claude, ChatGPT, Perplexity: used daily for content drafting, research, documentation, and workflow automation</li>
-            <li>Prompt-driven process design, building repeatable AI-assisted workflows into day-to-day operations</li>
-          </ul>
-          <h3 class="subhead" style="margin-top: 20px;">Email Marketing</h3>
-          <ul class="skills-list">
-            <li>Campaign strategy and execution</li>
-            <li>A/B testing (subject lines, send times, content formats)</li>
-            <li>Audience segmentation and deliverability optimization</li>
-            <li>Performance reporting and analytics</li>
-          </ul>
-        </div>
-        <div class="skills-col">
-          <h3 class="subhead">Technical</h3>
-          <ul class="skills-list">
-            <li>Custom HTML/CSS development, deployed inside CRM platforms</li>
-            <li>Website build and ongoing maintenance</li>
-            <li>Marketing automation workflow design</li>
-            <li>CRM architecture and setup</li>
-          </ul>
-          <h3 class="subhead" style="margin-top: 20px;">Operations</h3>
-          <ul class="skills-list">
-            <li>SOP documentation and process design</li>
-            <li>Compliance review and content gating</li>
-            <li>Cross-functional coordination</li>
-            <li>Process handoff and team enablement</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DISC -->
-  <section id="disc" class="section">
-    <div class="glass-card">
-      <h2 class="section-title">DISC Personality</h2>
-      <div class="disc-grid">
-        <div class="disc-item">
-          <span class="disc-dot disc-d"></span>
-          <div>
-            <h4>Dominance, 46%</h4>
-            <p>I take ownership of tasks and drive them to completion without waiting to be told twice.</p>
-          </div>
-        </div>
-        <div class="disc-item">
-          <span class="disc-dot disc-i"></span>
-          <div>
-            <h4>Influence, 28%</h4>
-            <p>I build warm, professional relationships with clients quickly. I communicate with enthusiasm and clarity.</p>
-          </div>
-        </div>
-        <div class="disc-item">
-          <span class="disc-dot disc-s"></span>
-          <div>
-            <h4>Steadiness, 21%</h4>
-            <p>I am the kind of VA who builds routines and sticks to them. That predictability is what builds long-term trust.</p>
-          </div>
-        </div>
-        <div class="disc-item">
-          <span class="disc-dot disc-c"></span>
-          <div>
-            <h4>Compliance, 5%</h4>
-            <p>I am not a detail-oriented person by default, which is exactly why I build checklists and SOPs for every recurring task. I do not leave accuracy to chance. I create systems that catch errors before they reach the client.</p>
+    <!-- HOME -->
+    <section class="panel" id="home" aria-label="Home">
+      <div class="sheet hero-sheet">
+        <div class="hero-layout">
+          <div class="hero-photo" role="img" aria-label="Wycliffe Omonge"></div>
+          <div class="hero-text">
+            <p class="eyebrow">Marketing Operations Specialist | GoHighLevel (GHL)</p>
+            <h1>Wycliffe Omonge</h1>
+            <hr class="hero-rule">
+            <p class="hero-intro">
+              I'm a Marketing Operations Specialist who builds the systems businesses run on:
+              websites, funnels, automation, and content infrastructure, mostly inside GoHighLevel, and
+              mostly from scratch.
+            </p>
+            <div class="hero-actions">
+              <button type="button" class="btn btn-primary" data-goto="work">View My Work</button>
+              <button type="button" class="btn btn-ghost" data-goto="contact">Get In Touch</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- MY WORK -->
-  <section id="work" class="section">
-    <h2 class="section-title section-title-standalone">My Work</h2>
-    <div class="work-grid">
-
-      <article class="glass-card work-card">
-        <div class="work-media"><img src="phoenix-homepage.jpg" alt="Phoenix Solutions and Services website homepage"></div>
-        <div class="work-body">
-          <h3>Phoenix Solutions and Services Website: Built From Scratch, Maintained Ongoing</h3>
-          <p class="work-label">The Problem</p>
-          <p>The business needed a professional, compliant website in a regulated financial education space, and there was nothing to start from.</p>
-          <p class="work-label">What I Built</p>
-          <p>The full website from the ground up in GoHighLevel: structure, pages, branding, copy, compliance-safe content, and the technical build underneath it. I've maintained and updated it continuously since. Team page changes, content updates, compliance fixes, structural corrections, whatever the business has needed.</p>
-          <p class="work-label">Why It Matters</p>
-          <p>This is the project that proves I can own a website end to end, not just contribute pieces to someone else's build. I didn't inherit this site and patch it. I built it, and I'm the one who keeps it running correctly.</p>
-          <p class="work-label">Result</p>
-          <p>Live, in active use, and under continuous maintenance.</p>
+    <!-- ABOUT -->
+    <section class="panel" id="about" aria-label="About Me">
+      <div class="sheet">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-copy">
+          <p>
+            I'm a Marketing Operations Specialist who builds the systems businesses run on:
+            websites, funnels, automation, and content infrastructure, mostly inside GoHighLevel, and
+            mostly from scratch.
+          </p>
+          <p>
+            Right now I own marketing operations for a financial education firm operating under strict
+            compliance guidelines. I built their website from the ground up and still maintain it. I've
+            stood up full CRM and blog infrastructure where none existed, built lead-generation funnels
+            that had to pass compliance review before going live, and written the SOPs the rest of the
+            team now runs on.
+          </p>
+          <p>
+            Before that, I spent close to four years running email marketing campaigns for an audience
+            of 50,000+ subscribers, managing 2-3 campaigns a week and pushing click-through rates from
+            18% to 28% through consistent testing and optimization.
+          </p>
+          <p>
+            What sets me apart from most people working in GoHighLevel: I'm not limited to the
+            drag-and-drop builder. I write HTML and CSS by hand and deploy it directly into GHL through
+            Custom Code, which means I can build things most GHL users simply can't. If a client needs
+            something outside the template library, I don't tell them it's not possible, I build it.
+          </p>
+          <p>
+            I also work daily with AI tools, Claude, ChatGPT, and Perplexity, as part of how I actually
+            get work done: drafting and refining content, researching and fact-checking faster, building
+            documentation, and automating pieces of my own workflow. This isn't a buzzword on a resume,
+            it's how I operate day to day, and it's part of why I can move quickly without sacrificing
+            accuracy.
+          </p>
+          <p>
+            I care about systems that outlast me. Every build I ship comes with documentation, so the
+            people who come after me can run it without needing me in the room.
+          </p>
         </div>
-      </article>
-
-      <article class="glass-card work-card">
-        <div class="work-media work-media-placeholder" aria-hidden="true"><span>Assessment Guide</span></div>
-        <div class="work-body">
-          <h3>Custom-Coded Assessment Guide (HTML/CSS, Published Inside GHL)</h3>
-          <p class="work-label">The Problem</p>
-          <p>A growing team needed a post-screening assessment guide that looked professional and functioned well, not another plain checklist buried in a PDF.</p>
-          <p class="work-label">What I Built</p>
-          <p>I hand-coded the entire page in HTML and CSS: a responsive card-based layout, do's-and-don'ts callout boxes, and a built-in grading system. Then I imported and published it directly into GoHighLevel using a Custom Code element. No template, no drag-and-drop builder, built from scratch and deployed into a live CRM environment.</p>
-          <p class="work-label">Why It Matters</p>
-          <p>Most people working inside GHL are limited to what the visual builder can do. I'm not. If a client needs something the template library doesn't support, I can build it and still get it live inside their existing system.</p>
-          <p class="work-label">Result</p>
-          <p>Live and in active daily use.</p>
-        </div>
-      </article>
-
-      <article class="glass-card work-card">
-        <div class="work-media work-media-placeholder" aria-hidden="true"><span>Blog Infrastructure</span></div>
-        <div class="work-body">
-          <h3>Blog Infrastructure, Built From Zero</h3>
-          <p class="work-label">The Problem</p>
-          <p>A business unit had no content management system at all. No blog, no category structure, no author profiles, no process for publishing anything.</p>
-          <p class="work-label">What I Built</p>
-          <p>The entire blog infrastructure inside GoHighLevel: category and author setup, a compliance-gated publishing workflow, and a documented SOP so the rest of the team could use it without me.</p>
-          <p class="work-label">Why It Matters</p>
-          <p>This wasn't a configuration task. It was standing up a working content system where nothing existed before, and making sure it would still run correctly after I handed it off.</p>
-          <p class="work-label">Result</p>
-          <p>Live blog with published content and a repeatable process the team still uses.</p>
-        </div>
-      </article>
-
-      <article class="glass-card work-card">
-        <div class="work-media"><img src="phoenix-funnel-offer.jpg" alt="Retirement lead magnet funnel offer page"></div>
-        <div class="work-body">
-          <h3>Retirement Lead Magnet Funnel</h3>
-          <p class="work-label">The Problem</p>
-          <p>A financial education business needed a compliant, conversion-ready funnel to capture leads, inside a regulatory environment where most shortcuts aren't allowed.</p>
-          <p class="work-label">What I Built</p>
-          <p>Full landing page, automation workflow, and email sequence, built and QA'd inside GoHighLevel.</p>
-          <p class="work-label">Why It Matters</p>
-          <p>Compliance constraints make funnel-building harder, not easier. Every piece had to hold up to review before it could go live.</p>
-          <p class="work-label">Result</p>
-          <p>Approved for live campaign traffic within two weeks of starting the build.</p>
-        </div>
-      </article>
-
-      <article class="glass-card work-card">
-        <div class="work-media work-media-placeholder" aria-hidden="true"><span>Page Builder</span></div>
-        <div class="work-body">
-          <h3>Custom Code Inside a Platform's Own Page Builder</h3>
-          <p class="work-label">The Problem</p>
-          <p>A second assessment guide was needed, but this time it had to live inside GoHighLevel's own Website page builder as embedded code, not as a standalone page.</p>
-          <p class="work-label">What I Built</p>
-          <p>Adapted the same HTML/CSS system to run correctly as a Custom Code element inside a GHL Website page, matched it to the brand's exact color and typography system, and solved a platform-specific quirk that was breaking the layout.</p>
-          <p class="work-label">Why It Matters</p>
-          <p>Building a standalone page is one skill. Making custom code behave correctly inside someone else's platform constraints is a different, harder one. This project proves I can do both.</p>
-          <p class="work-label">Result</p>
-          <p>Live and matching brand standards exactly.</p>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="glass-card contact-card">
-      <h2 class="section-title">Contact Me</h2>
-      <p class="contact-intro">I'm here to build the smooth backend operations your business needs so you can focus entirely on growth. Let's get started!</p>
-
-      <div class="contact-links">
-        <a href="mailto:wycliffeomonge1@gmail.com">wycliffeomonge1@gmail.com</a>
-        <a href="tel:+254720299795">+254 720 299 795</a>
-        <a href="https://linkedin.com/in/wycliffeomongedigitalmarketer" target="_blank" rel="noopener">LinkedIn</a>
       </div>
+    </section>
 
-      <form class="contact-form" id="contactForm">
-        <div class="form-row">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="email" name="email" placeholder="Your email" required>
+    <!-- SKILLS -->
+    <section class="panel" id="skills" aria-label="My Skills">
+      <div class="sheet">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-columns">
+          <div class="skills-col">
+            <h3 class="subhead">Platforms &amp; Tools</h3>
+            <ul class="skills-list">
+              <li>GoHighLevel (GHL): funnels, websites, automation workflows, blog/CMS builds, Custom Code</li>
+              <li>HTML &amp; CSS: hand-coded pages and components, not template-dependent</li>
+              <li>Mailchimp, email marketing automation</li>
+              <li>Canva, Notion, Slack, Asana</li>
+            </ul>
+            <h3 class="subhead" style="margin-top: 22px;">AI &amp; Workflow Tools</h3>
+            <ul class="skills-list">
+              <li>Claude, ChatGPT, Perplexity: used daily for content drafting, research, documentation, and workflow automation</li>
+              <li>Prompt-driven process design, building repeatable AI-assisted workflows into day-to-day operations</li>
+            </ul>
+            <h3 class="subhead" style="margin-top: 22px;">Email Marketing</h3>
+            <ul class="skills-list">
+              <li>Campaign strategy and execution</li>
+              <li>A/B testing (subject lines, send times, content formats)</li>
+              <li>Audience segmentation and deliverability optimization</li>
+              <li>Performance reporting and analytics</li>
+            </ul>
+          </div>
+          <div class="skills-col">
+            <h3 class="subhead">Technical</h3>
+            <ul class="skills-list">
+              <li>Custom HTML/CSS development, deployed inside CRM platforms</li>
+              <li>Website build and ongoing maintenance</li>
+              <li>Marketing automation workflow design</li>
+              <li>CRM architecture and setup</li>
+            </ul>
+            <h3 class="subhead" style="margin-top: 22px;">Operations</h3>
+            <ul class="skills-list">
+              <li>SOP documentation and process design</li>
+              <li>Compliance review and content gating</li>
+              <li>Cross-functional coordination</li>
+              <li>Process handoff and team enablement</li>
+            </ul>
+          </div>
         </div>
-        <textarea name="message" rows="4" placeholder="Message" required></textarea>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-        <p class="form-note" id="formNote">This opens your email app with the message ready to send.</p>
-      </form>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <footer class="site-footer">
-    <p>&copy; <span id="year"></span> Wycliffe Omonge</p>
-  </footer>
+    <!-- DISC -->
+    <section class="panel" id="disc" aria-label="DISC Personality">
+      <div class="sheet sheet-centered">
+        <h2 class="section-title">DISC Personality</h2>
+        <div class="disc-grid">
+          <div class="disc-item">
+            <span class="disc-dot disc-d"></span>
+            <div>
+              <h4>Dominance, 46%</h4>
+              <p>I take ownership of tasks and drive them to completion without waiting to be told twice.</p>
+            </div>
+          </div>
+          <div class="disc-item">
+            <span class="disc-dot disc-i"></span>
+            <div>
+              <h4>Influence, 28%</h4>
+              <p>I build warm, professional relationships with clients quickly. I communicate with enthusiasm and clarity.</p>
+            </div>
+          </div>
+          <div class="disc-item">
+            <span class="disc-dot disc-s"></span>
+            <div>
+              <h4>Steadiness, 21%</h4>
+              <p>I am the kind of VA who builds routines and sticks to them. That predictability is what builds long-term trust.</p>
+            </div>
+          </div>
+          <div class="disc-item">
+            <span class="disc-dot disc-c"></span>
+            <div>
+              <h4>Compliance, 5%</h4>
+              <p>I am not a detail-oriented person by default, which is exactly why I build checklists and SOPs for every recurring task. I do not leave accuracy to chance. I create systems that catch errors before they reach the client.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</main>
+    <!-- MY WORK -->
+    <section class="panel" id="work" aria-label="My Work">
+      <div class="sheet">
+        <h2 class="section-title">My Work</h2>
+        <div class="work-grid">
+
+          <article class="work-card">
+            <div class="work-media work-shot-home" role="img" aria-label="Phoenix Solutions and Services website homepage"></div>
+            <div class="work-body">
+              <h3>Phoenix Solutions and Services Website: Built From Scratch, Maintained Ongoing</h3>
+              <p class="work-label">The Problem</p>
+              <p>The business needed a professional, compliant website in a regulated financial education space, and there was nothing to start from.</p>
+              <p class="work-label">What I Built</p>
+              <p>The full website from the ground up in GoHighLevel: structure, pages, branding, copy, compliance-safe content, and the technical build underneath it. I've maintained and updated it continuously since. Team page changes, content updates, compliance fixes, structural corrections, whatever the business has needed.</p>
+              <div class="work-more" id="more1">
+              <div>
+                <p class="work-label">Why It Matters</p>
+              <p>This is the project that proves I can own a website end to end, not just contribute pieces to someone else's build. I didn't inherit this site and patch it. I built it, and I'm the one who keeps it running correctly.</p>
+              <p class="work-label">Result</p>
+              <p>Live, in active use, and under continuous maintenance.</p>
+              </div>
+            </div>
+            <button type="button" class="read-more" aria-expanded="false" aria-controls="more1">Read more</button>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-media work-media-placeholder" aria-hidden="true"><span>Assessment Guide</span></div>
+            <div class="work-body">
+              <h3>Custom-Coded Assessment Guide (HTML/CSS, Published Inside GHL)</h3>
+              <p class="work-label">The Problem</p>
+              <p>A growing team needed a post-screening assessment guide that looked professional and functioned well, not another plain checklist buried in a PDF.</p>
+              <p class="work-label">What I Built</p>
+              <p>I hand-coded the entire page in HTML and CSS: a responsive card-based layout, do's-and-don'ts callout boxes, and a built-in grading system. Then I imported and published it directly into GoHighLevel using a Custom Code element. No template, no drag-and-drop builder, built from scratch and deployed into a live CRM environment.</p>
+              <div class="work-more" id="more2">
+              <div>
+                <p class="work-label">Why It Matters</p>
+              <p>Most people working inside GHL are limited to what the visual builder can do. I'm not. If a client needs something the template library doesn't support, I can build it and still get it live inside their existing system.</p>
+              <p class="work-label">Result</p>
+              <p>Live and in active daily use.</p>
+              </div>
+            </div>
+            <button type="button" class="read-more" aria-expanded="false" aria-controls="more2">Read more</button>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-media work-media-placeholder" aria-hidden="true"><span>Blog Infrastructure</span></div>
+            <div class="work-body">
+              <h3>Blog Infrastructure, Built From Zero</h3>
+              <p class="work-label">The Problem</p>
+              <p>A business unit had no content management system at all. No blog, no category structure, no author profiles, no process for publishing anything.</p>
+              <p class="work-label">What I Built</p>
+              <p>The entire blog infrastructure inside GoHighLevel: category and author setup, a compliance-gated publishing workflow, and a documented SOP so the rest of the team could use it without me.</p>
+              <div class="work-more" id="more3">
+              <div>
+                <p class="work-label">Why It Matters</p>
+              <p>This wasn't a configuration task. It was standing up a working content system where nothing existed before, and making sure it would still run correctly after I handed it off.</p>
+              <p class="work-label">Result</p>
+              <p>Live blog with published content and a repeatable process the team still uses.</p>
+              </div>
+            </div>
+            <button type="button" class="read-more" aria-expanded="false" aria-controls="more3">Read more</button>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-media work-shot-funnel" role="img" aria-label="Retirement lead magnet funnel offer page"></div>
+            <div class="work-body">
+              <h3>Retirement Lead Magnet Funnel</h3>
+              <p class="work-label">The Problem</p>
+              <p>A financial education business needed a compliant, conversion-ready funnel to capture leads, inside a regulatory environment where most shortcuts aren't allowed.</p>
+              <p class="work-label">What I Built</p>
+              <p>Full landing page, automation workflow, and email sequence, built and QA'd inside GoHighLevel.</p>
+              <div class="work-more" id="more4">
+              <div>
+                <p class="work-label">Why It Matters</p>
+              <p>Compliance constraints make funnel-building harder, not easier. Every piece had to hold up to review before it could go live.</p>
+              <p class="work-label">Result</p>
+              <p>Approved for live campaign traffic within two weeks of starting the build.</p>
+              </div>
+            </div>
+            <button type="button" class="read-more" aria-expanded="false" aria-controls="more4">Read more</button>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <div class="work-media work-media-placeholder" aria-hidden="true"><span>Page Builder</span></div>
+            <div class="work-body">
+              <h3>Custom Code Inside a Platform's Own Page Builder</h3>
+              <p class="work-label">The Problem</p>
+              <p>A second assessment guide was needed, but this time it had to live inside GoHighLevel's own Website page builder as embedded code, not as a standalone page.</p>
+              <p class="work-label">What I Built</p>
+              <p>Adapted the same HTML/CSS system to run correctly as a Custom Code element inside a GHL Website page, matched it to the brand's exact color and typography system, and solved a platform-specific quirk that was breaking the layout.</p>
+              <div class="work-more" id="more5">
+              <div>
+                <p class="work-label">Why It Matters</p>
+              <p>Building a standalone page is one skill. Making custom code behave correctly inside someone else's platform constraints is a different, harder one. This project proves I can do both.</p>
+              <p class="work-label">Result</p>
+              <p>Live and matching brand standards exactly.</p>
+              </div>
+            </div>
+            <button type="button" class="read-more" aria-expanded="false" aria-controls="more5">Read more</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="panel" id="contact" aria-label="Contact Me">
+      <div class="sheet sheet-centered">
+        <h2 class="section-title">Contact Me</h2>
+        <p class="contact-intro">I'm here to build the smooth backend operations your business needs so you can focus entirely on growth. Let's get started!</p>
+
+        <div class="contact-links">
+          <a href="mailto:wycliffeomonge1@gmail.com">wycliffeomonge1@gmail.com</a>
+          <a href="tel:+254720299795">+254 720 299 795</a>
+          <a href="https://linkedin.com/in/wycliffeomongedigitalmarketer" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+          </div>
+          <textarea name="message" rows="4" placeholder="Message" required></textarea>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-note" id="formNote">This opens your email app with the message ready to send.</p>
+        </form>
+
+        <p class="sheet-footer">&copy; <span id="year"></span> Wycliffe Omonge</p>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<div class="progress" aria-hidden="true" id="progress"></div>
 
 <script src="script.js"></script>
 </body>
