@@ -27,7 +27,7 @@ if (menuToggle) {
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Contact form (placeholder — wire to Formspree/Netlify Forms before launch)
+// Contact form (placeholder: wire to Formspree/Netlify Forms before launch)
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
