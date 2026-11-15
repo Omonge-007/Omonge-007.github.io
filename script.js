@@ -15,13 +15,32 @@ const setActive = () => {
 window.addEventListener('scroll', setActive);
 setActive();
 
-// Mobile menu (simple: just scroll-to on tap, sidebar hidden on mobile by CSS)
+// Mobile menu
 const menuToggle = document.getElementById('menuToggle');
+
+const setMenu = (open) => {
+  document.body.classList.toggle('nav-open', open);
+  if (menuToggle) {
+    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+};
+
 if (menuToggle) {
   menuToggle.addEventListener('click', () => {
-    document.body.classList.toggle('nav-open');
+    setMenu(!document.body.classList.contains('nav-open'));
   });
 }
+
+// Tapping a link closes the menu
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => setMenu(false));
+});
+
+// Escape closes the menu
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') setMenu(false);
+});
 
 // Footer year
 const yearEl = document.getElementById('year');
