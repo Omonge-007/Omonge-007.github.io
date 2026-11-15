@@ -607,8 +607,10 @@ a { color: var(--gold-soft); text-decoration: none; }
     min-height: auto;
   }
 
-  .panel::before { position: fixed; inset: 0; }
-  .panel::after { position: fixed; inset: 0; }
+  /* Absolute, not fixed: .strip has will-change, which would make a fixed
+     layer span the whole strip and cover the panels above it */
+  .panel::before { position: absolute; inset: 0; }
+  .panel::after { position: absolute; inset: 0; }
   #about::before, #skills::before, #disc::before, #work::before, #contact::before { background-image: var(--img-head); }
   #about::after, #skills::after, #disc::after, #work::after, #contact::after { background: linear-gradient(120deg, rgba(10,10,22,0.7), rgba(10,10,22,0.86)); }
 
