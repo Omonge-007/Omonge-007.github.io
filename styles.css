@@ -389,4 +389,44 @@ main {
   .work-card { flex-direction: column; }
   .work-media { flex: none; min-height: 140px; }
   .glass-card { padding: 26px; }
+
+  /* Mobile menu panel, opens under the top bar */
+  body.nav-open .sidebar {
+    display: flex;
+    top: 60px;
+    bottom: auto;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px 0 14px;
+    border-right: none;
+    border-bottom: 1px solid rgba(201,162,75,0.15);
+  }
+
+  body.nav-open .sidebar .brand { display: none; }
+
+  body.nav-open .nav-icons { flex-direction: column; gap: 2px; }
+
+  body.nav-open .nav-link {
+    width: auto;
+    height: 48px;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 0 22px;
+    border-radius: 0;
+  }
+
+  body.nav-open .nav-link::after {
+    position: static;
+    opacity: 1;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 15px;
+  }
+
+  body.nav-open .menu-toggle span:nth-child(1) { transform: translateY(11px) rotate(45deg); }
+  body.nav-open .menu-toggle span:nth-child(2) { opacity: 0; }
+  body.nav-open .menu-toggle span:nth-child(3) { transform: translateY(-11px) rotate(-45deg); }
 }
