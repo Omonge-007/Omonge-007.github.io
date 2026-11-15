@@ -27,11 +27,26 @@ if (menuToggle) {
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Contact form (placeholder: wire to Formspree/Netlify Forms before launch)
+// Contact form (opens the visitor's email app with the message ready to send)
+const CONTACT_EMAIL = 'wycliffeomonge1@gmail.com';
 const contactForm = document.getElementById('contactForm');
+const formNote = document.getElementById('formNote');
+
 if (contactForm) {
   contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('This form is not connected yet. Wire it to Formspree, Netlify Forms, or a mailto fallback before going live.');
+
+    const name = contactForm.elements.name.value.trim();
+    const email = contactForm.elements.email.value.trim();
+    const message = contactForm.elements.message.value.trim();
+
+    const subject = `Portfolio message from ${name}`;
+    const body = `${message}\n\nFrom: ${name}\nReply to: ${email}`;
+
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    if (formNote) {
+      formNote.textContent = `Your email app should be opening now. If it does not, write to ${CONTACT_EMAIL} directly.`;
+    }
   });
 }
