@@ -29,6 +29,7 @@ body {
 h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+  letter-spacing: -0.02em;
   margin: 0 0 0.4em;
   color: #fff;
 }
@@ -62,15 +63,19 @@ a { color: var(--gold-soft); text-decoration: none; }
 .sidebar .brand {
   width: 44px;
   height: 44px;
+  flex: 0 0 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--gold), #8a6d2f);
-  color: var(--navy-deep);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-family: 'Playfair Display', serif;
+  border: 2px solid var(--gold);
+  overflow: hidden;
   margin-bottom: 40px;
+}
+
+.brand img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .nav-icons {
@@ -92,7 +97,7 @@ a { color: var(--gold-soft); text-decoration: none; }
   height: 44px;
   border-radius: 12px;
   color: var(--text-muted);
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s ease-out, color 0.2s ease-out;
 }
 
 .nav-link svg {
@@ -123,7 +128,7 @@ a { color: var(--gold-soft); text-decoration: none; }
   font-size: 12px;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.15s;
+  transition: opacity 0.15s ease-out;
 }
 
 .nav-link:hover::after { opacity: 1; }
@@ -146,9 +151,12 @@ a { color: var(--gold-soft); text-decoration: none; }
 }
 
 .mobile-bar .brand {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  color: var(--gold);
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  overflow: hidden;
 }
 
 .menu-toggle {
@@ -256,9 +264,10 @@ main {
   border-radius: 999px;
   font-weight: 600;
   font-size: 14px;
-  transition: transform 0.15s, box-shadow 0.15s;
+  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
 }
 .btn:hover { transform: translateY(-2px); }
+.btn:active { transform: scale(0.97); }
 
 .btn-primary {
   background: linear-gradient(135deg, var(--gold), #a8822f);
@@ -273,7 +282,7 @@ main {
 
 /* About */
 .about-copy { color: var(--text-muted); line-height: 1.7; }
-.about-copy p { margin: 0 0 16px; }
+.about-copy p { margin: 0 0 16px; max-width: 65ch; }
 .about-copy p:last-child { margin-bottom: 0; }
 .subhead { font-family: 'Lato', sans-serif; font-size: 18px; font-weight: 700; color: var(--gold-soft); margin-bottom: 16px; }
 
@@ -311,7 +320,7 @@ main {
 .disc-s { background: #b98a2e; }
 .disc-c { background: #faf9f7; }
 .disc-item h4 { font-size: 15px; margin-bottom: 4px; }
-.disc-item p { color: var(--text-muted); margin: 0; line-height: 1.6; font-size: 14px; }
+.disc-item p { color: var(--text-muted); margin: 0; line-height: 1.6; font-size: 14px; max-width: 65ch; }
 
 /* Work */
 .work-grid { display: flex; flex-direction: column; gap: 28px; }
@@ -353,7 +362,7 @@ main {
   font-weight: 700;
   margin: 12px 0 2px;
 }
-.work-body p:not(.work-label) { color: var(--text-muted); margin: 0 0 4px; line-height: 1.6; font-size: 14px; }
+.work-body p:not(.work-label) { color: var(--text-muted); margin: 0 0 4px; line-height: 1.6; font-size: 14px; max-width: 65ch; }
 
 /* Contact */
 .contact-card { max-width: 640px; }
